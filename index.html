@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Starhold — Top-down Space Survival</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="hud-left">
+      <div id="gems">Gems: 0</div>
+      <div id="wave">Wave: 0</div>
+      <div id="countdown">Next wave in: --:--</div>
+    </div>
+
+    <div id="hud-center">
+      <div id="shieldbar"><div id="shield-fill"></div></div>
+      <div id="hull">Hull: ♥♥</div>
+    </div>
+
+    <div id="hud-right">
+      <div id="message">Press Start to begin</div>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+
+  <div id="shopOverlay" class="overlay hidden" aria-hidden="true">
+    <div class="shop-panel">
+      <h2>SHOP (E to close)</h2>
+      <div class="shop-row">
+        <button class="shop-item" data-item="wall">Base Wall Segment — 10g</button>
+        <button class="shop-item" data-item="repair">Repair Kit — 5g</button>
+        <button class="shop-item" data-item="turret">Stationary Turret — 50g</button>
+      </div>
+      <div class="shop-row">
+        <button class="shop-item" data-item="shipup">Ship Upgrade — 40g</button>
+        <button class="shop-item" data-item="newship">New Ship — 100g</button>
+      </div>
+      <div class="shop-note">After buying an item, click to place it on the map (ghost preview). Right-click or Esc to cancel.</div>
+    </div>
+  </div>
+
+  <div id="gameContainer"></div>
+
+  <!-- Phaser 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
