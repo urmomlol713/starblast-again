@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+html,body { margin:0; height:100%; background:#071226; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#e6f0ff; }
+#gameContainer { width:100%; height:100vh; overflow:hidden; position:relative; }
+
+#ui { position:absolute; top:10px; left:10px; right:10px; display:flex; justify-content:space-between; z-index:20; pointer-events:none; }
+#hud-left, #hud-center, #hud-right { display:flex; gap:8px; align-items:center; pointer-events:auto; }
+#gems, #wave, #countdown, #message { background:rgba(0,0,0,0.45); padding:8px 10px; border-radius:8px; font-weight:600; color:#dbeeff; }
+#startBtn { background:#0b84ff; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+#startBtn:active { transform:translateY(1px); }
+
+#shieldbar { width:240px; height:18px; background:rgba(255,255,255,0.07); border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); }
+#shield-fill { height:100%; width:100%; background:linear-gradient(90deg,#41f1ff,#2ea8ff); transform-origin:left center; transition:width 200ms linear; }
+
+#hull { background:rgba(0,0,0,0.45); padding:8px 10px; border-radius:8px; font-weight:700; color:#ffdddd; }
+
+.overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:30; background:rgba(0,0,0,0.5); }
+.overlay.hidden { display:none; }
+.shop-panel { background:#071226; border:1px solid rgba(255,255,255,0.06); padding:18px; border-radius:10px; width:520px; color:#e8f5ff; }
+.shop-row { display:flex; gap:10px; margin:10px 0; }
+.shop-item { flex:1; padding:10px; background:rgba(255,255,255,0.04); border:none; border-radius:8px; color:#dfeeff; cursor:pointer; }
+.shop-item:active { transform:translateY(1px); }
+
+.shop-note { margin-top:8px; font-size:13px; opacity:0.9; color:#bfe6ff; }
+
+/* placement ghost cursor */
+.ghost-valid { outline:2px solid rgba(0,255,128,0.85); }
+.ghost-invalid { outline:2px solid rgba(255,64,64,0.85); }
